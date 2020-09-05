@@ -320,6 +320,12 @@ div.footer-icons p img {
     background-color: hsl(233, 26%, 24%);
 }
 
+h1.error {
+    font-size: 48px;
+    margin: 20vh auto;
+    color: #222;
+}
+
 
 /* ================================ */
 /* for non-mobile interface */

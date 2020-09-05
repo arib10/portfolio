@@ -43,22 +43,39 @@ app.post("/messages", (req, res) => {
     res.send("Sent!");
 });
 
-app.get("/blog/what-you-really-need-to-become-a-web-developer", (req, res) => {
-    res.render("article1");
-});
-
-app.get("/blog/5-steps-that-made-my-first-javascript-project-successful", (req, res) => {
-    res.render("article2");
-});
-
-app.get("/blog/why-you-can't-code-with-phone", (req, res) => {
-    res.render("article3");
-});
-app.get("/form", (req, res) => {
-    res.render("form");
+app.get("/aribakande1052001/hire", (req, res) => {
+    mongoClient.connect(url, (err, database) => {
+        if (err) throw err;
+        const dbo = database.db("portfolio");
+        dbo.collection("hire").find({}).toArray( (err, result) => {
+            if (err) throw err;
+            console.log(res);
+            res.render("hires", {hires: result});
+            database.close();
+        });
+    })
 })
 
-app.listen(3000, () => {
+
+app.get("/aribakande1052001/messages", (req, res) => {
+    mongoClient.connect(url, (err, database) => {
+        if (err) throw err;
+        const dbo = database.db("portfolio");
+        dbo.collection("messages").find({}).toArray( (err, result) => {
+            if (err) throw err;
+            console.log(res);
+            res.render("messages", {messages: result});
+            database.close();
+        })
+    })
+})
+
+app.get("*", (req, res) => {
+    res.render("error");
+});
+
+const port = 3000 || process.env.PORT;
+app.listen(port, () => {
     console.log("Your portfolio site is on....");
 });
 

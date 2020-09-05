@@ -38,7 +38,7 @@ $(".hire-form").submit(function(event) {
     const data = $(this).serialize()
     $.post("/hire", data, ()=> {
         $("#par1").html("I'm delighted to be offered a job from " + $(".hirename").val() + "!");
-        $("#par2").html("I will respond in the shortest time through " + $(".hiremail").val() + ".");
+        $("#par2").html("I will respond in the shortest time-frame through " + $(".hiremail").val() + ".");
         $(".form-hire").fadeOut( function () {
             $(".thanks").fadeIn();
         });

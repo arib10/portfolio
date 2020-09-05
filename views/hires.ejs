@@ -1,0 +1,13 @@
+
+<a href="/">Go Home</a>
+
+<% hires.forEach( hire => { %>
+    <div>
+        <h2>New Hire From <%- hire.name.bold() %></h2>
+        <p>Email: <%- hire.email.bold() %></p>
+        <p>Hire type: <%- hire.hire_type.bold() %></p>
+        <p>hire description: <%- hire.description.bold() %></p>
+        <hr>
+    </div>
+
+<% }) %>

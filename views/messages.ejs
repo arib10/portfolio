@@ -1,0 +1,10 @@
+<a href="/">Go Home</a>
+<% messages.forEach( message => { %>
+    <div>
+        <h2>New Message From <%- message.name.bold() %></h2>
+        <p>Email: <%- message.email.bold() %></p>
+        <p>Message: <%- message.message.bold() %></p>
+        <hr>
+    </div>
+
+<% }) %>
