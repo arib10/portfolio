@@ -3,7 +3,7 @@ const express   = require("express"),
       mongodb  = require("mongodb"),
       mongoClient = mongodb.MongoClient,
       bodyParser  = require("body-parser"),
-      url         = "mongodb://localhost:27017/";
+      url         = process.env.DATABASEURL;
 
 
 app.set("view engine", "ejs");
