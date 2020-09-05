@@ -1,0 +1,38 @@
+<!-- <link rel="stylesheet" href="../style.css"> -->
+<div class="modal">
+    <span class="close-icon">&#10006;</span>
+    <div class="thanks">
+        <h1>Thanks for considering me!</h1>
+        <p id="par1"></p>
+        <p id="par2"></p>
+    </div>
+    <div class="form form-hire">
+        <h2 class="center">Send Me a Job Offer.</h2>
+        <form action="/hire" method="post" class="hire-form">
+            <div class="input">
+                <label for="name">Full Name/Company Name</label>
+                <input type="text" name="name" id="name" class="hirename" required>
+            </div>
+            <div class="input">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" class="hiremail" id="email" required>
+            </div>
+            <div class="input">
+                <label for="name">Job Type</label>
+                <select name="job_type" id="" required>
+                    <option value="contract">Contract</option>
+                    <option value="part time employment">Part-time Employment</option>
+                    <option value="full time employment">Full-time Employment</option>
+                    <option value="internship">Internship</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="message">Job Description</label>
+                <textarea name="job_description" id="message" cols="30" rows="10" required></textarea>
+            </div>
+            <div class="input">
+                <input type="submit" value="Send Me a Job Offer">
+            </div>
+        </form>
+    </div>
+</div>
