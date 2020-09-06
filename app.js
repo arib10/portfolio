@@ -19,13 +19,12 @@ app.post("/hire", (req, res) => {
         if (err) throw err;
         const dbo = database.db("portfolio");
         const newHire = {name: req.body.name, email: req.body.email, hire_type: req.body.job_type, description: req.body.job_description}
-        dbo.collection("hire").insertOne(newHire, (err, res) => {
+        dbo.collection("hire").insertOne(newHire, (err, result) => {
             if (err) throw err;
-            console.log(res.ops[0]);
+            res.send("sent!");
             database.close();
         });
     });
-    res.send("sent!");
 });
 
 app.post("/messages", (req, res) => {
@@ -33,14 +32,12 @@ app.post("/messages", (req, res) => {
         if (err) throw err;
         const dbo = database.db("portfolio");
         const data = {name: req.body.name, email: req.body.email, message: req.body.message}
-        dbo.collection("messages").insertOne(data, (err, res) => {
+        dbo.collection("messages").insertOne(data, (err, result) => {
             if (err) throw err;
-            console.log("inserted");
-            console.log(res.ops[0]);
+            res.send("Sent!");
             database.close();
         });
     });
-    res.send("Sent!");
 });
 
 app.get("/aribakande1052001/hire", (req, res) => {
@@ -49,7 +46,6 @@ app.get("/aribakande1052001/hire", (req, res) => {
         const dbo = database.db("portfolio");
         dbo.collection("hire").find({}).toArray( (err, result) => {
             if (err) throw err;
-            console.log(res);
             res.render("hires", {hires: result});
             database.close();
         });
@@ -63,7 +59,6 @@ app.get("/aribakande1052001/messages", (req, res) => {
         const dbo = database.db("portfolio");
         dbo.collection("messages").find({}).toArray( (err, result) => {
             if (err) throw err;
-            console.log(res);
             res.render("messages", {messages: result});
             database.close();
         })

@@ -15,6 +15,14 @@ window.onresize = () => {
     }
 }
 
+$("nav ul li").click( function() {
+    if (window.innerWidth <= 750) {
+        $(".navbar").hide();
+        $("#open-icon").show()
+        $("#close-icon").hide()
+    }
+});
+
 openIcon.onclick = () => {
     navbar.style.display = "block";
     openIcon.style.display = "none";
