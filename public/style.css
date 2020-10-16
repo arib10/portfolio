@@ -148,8 +148,7 @@ ul.bulleted-list li {
 .first .intro p {
     margin: 10px 0px;
     padding: 10px;
-    word-spacing: 5px;
-    letter-spacing: 1px;
+    word-spacing: 2px;
 }
 
 /* Hire-me button */
