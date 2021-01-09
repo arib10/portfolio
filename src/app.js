@@ -3,6 +3,8 @@ const express   = require("express"),
       mongodb  = require("mongodb"),
       mongoClient = mongodb.MongoClient,
       bodyParser  = require("body-parser"),
+      serverless  = require("serverless-http"),
+      router      = express.Router(),
       url         = process.env.DATABASEURL;
 
 
@@ -10,11 +12,11 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
     res.render("home");
 });
 
-app.post("/hire", (req, res) => {
+router.post("/hire", (req, res) => {
     mongoClient.connect(url, (err, database) => {
         if (err) throw err;
         const dbo = database.db("portfolio");
@@ -27,7 +29,7 @@ app.post("/hire", (req, res) => {
     });
 });
 
-app.post("/messages", (req, res) => {
+router.post("/messages", (req, res) => {
     mongoClient.connect(url, (err, database) => {
         if (err) throw err;
         const dbo = database.db("portfolio");
@@ -40,7 +42,7 @@ app.post("/messages", (req, res) => {
     });
 });
 
-app.get("/aribakande1052001/hire", (req, res) => {
+router.get("/aribakande1052001/hire", (req, res) => {
     mongoClient.connect(url, (err, database) => {
         if (err) throw err;
         const dbo = database.db("portfolio");
@@ -53,7 +55,7 @@ app.get("/aribakande1052001/hire", (req, res) => {
 })
 
 
-app.get("/aribakande1052001/messages", (req, res) => {
+router.get("/aribakande1052001/messages", (req, res) => {
     mongoClient.connect(url, (err, database) => {
         if (err) throw err;
         const dbo = database.db("portfolio");
@@ -65,13 +67,17 @@ app.get("/aribakande1052001/messages", (req, res) => {
     })
 })
 
-app.get("*", (req, res) => {
+router.get("*", (req, res) => {
     res.render("error");
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log("Your portfolio site is on....");
-});
+app.use("/.netlify/functions/app", router);
+
+module.exports.handler = serverless(app);
+
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => {
+//     console.log("Your portfolio site is on....");
+// });
 
 // mongod --storageEngine=mmapv1 --dbpath C:\mongodb\data\db
