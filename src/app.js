@@ -75,9 +75,9 @@ app.use("/.netlify/functions/app", router);
 
 module.exports.handler = serverless(app);
 
-// const port = process.env.PORT || 3000;
-// app.listen(port, () => {
-//     console.log("Your portfolio site is on....");
-// });
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log("Your portfolio site is on....");
+});
 
 // mongod --storageEngine=mmapv1 --dbpath C:\mongodb\data\db
