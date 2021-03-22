@@ -1,0 +1,219 @@
+<%- include("header") %>
+
+<%- include("form") %>
+
+  <div class="row flex first">
+
+    <div class="col-5 hero center">
+      <img src="images/pic.jpg" alt="" id="hero-image">
+      <p>Abdulrasheed Ibraheem Akande [ARIB]</p>
+      <p>Full Stack Engineer and a Writer.</p>
+    </div>
+
+    <div class="intro">
+      <p>Hi! I am a Fullstack Engineer and a writer from Nigeria. I have developed several softwares and profered solutions to most prominent mathematical problems with coding. I have worked as a web developer at <strong><a href="http://icitifysolution.com">Icitify Soluitons</a></strong> Ltd and currently a Programming Instructor at <strong><a href="http://ibnqayyimpros.com">Ibn Qayyim Pros</a></strong>. I am a pressman at NIMechE UI Press (Nigerian institute of Mechanical Engineers, University of Ibadan). Time is a golden gift from our Creator and I take it as such. I love colony of creative and intelligent minds. </p>
+      <button class="request-btn hire" id="btn-mobile">Hire Me</button>
+      <a href="Abdulrasheed Ibraheem.pdf" download="Abdulrasheed Ibraheem.pdf">
+        <button class="request-btn">Download Resume</button>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="row why-row" id="skills">
+    <div class="why-container">
+      <div class="col-6">
+        <h1 class="heading-text">Technologies I Use Proficiently</h1>
+      </div>
+
+      <div class="flex">
+  
+        <div class="col-3 why-item">
+          <img src="images/js.jpg" alt="">
+          <h2 class="heading-text">JavaScript</h2>
+        </div>
+  
+        <div class="col-3 why-item">
+          <img src="images/node.png" alt="">
+          <h2 class="heading-text">NodeJs</h2>
+        </div>
+
+        <div class="col-3 why-item">
+          <img src="images/express.png" alt="">
+          <h2 class="heading-text">Express</h2>
+        </div>
+
+        <div class="col-3 why-item">
+          <img src="images/mongo.png" alt="">
+          <h2 class="heading-text">MongoDB</h2>
+        </div>
+
+        <div class="col-3 why-item">
+          <img src="images/wordpress.png" alt="">
+          <h2 class="heading-text">Wordpress</h2>
+        </div>
+
+        <div class="col-3 why-item">
+          <img src="images/new-php-logo.svg" alt="">
+          <h2 class="heading-text">PHP</h2>
+        </div>
+
+        <div class="col-3 why-item">
+          <img src="images/mysql.png" alt="">
+          <h2 class="heading-text">MySQL</h2>
+        </div>
+
+        <div class="col-3 why-item">
+          <img src="images/html.png" alt="">
+          <h2 class="heading-text">HTML5</h2>
+        </div>
+  
+        <div class="col-3 why-item">
+          <img src="images/css.png" alt="">
+          <h2 class="heading-text">CSS3</h2>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="row article" id="projects">
+    <div class="why-container">
+      <div class="col-12">
+        <h1 class="heading-text">My Recent Works</h1>
+      </div>
+
+      <div class="col-12 flex">
+        <div class="col-3 article-item">
+          <img src="images/laundry.PNG" alt="">
+          <div class="desc">
+            <a href="https://arib-laundry.herokuapp.com/" target="_blank">
+              <h2 class="heading-text">Laundry Company Management App</h2>
+            </a>
+            <p>A friendly user experience software developed for Laundry companies to automate their services. The app is to be managed by the comapny's staff to keep records of washes, payments and customers.</p>
+          </div>
+        </div>
+        <div class="col-3 article-item">
+          <img src="images/calculus.PNG" alt="">
+          <div class="desc">
+            <a href="http://aribpoems.dx.am/calculus/"  target="_blank">
+              <h2 class="heading-text">Differential Calculus Solver</h2>
+            </a>
+            <p>The app, which uses mid-level algorithm, is designed to solve basic defferential Calculus problems. All the user needs is to input his problem, check if the desired output is what he meant and get it solved with just a click.</p>
+          </div>
+        </div>
+        <!-- <div class="col-3 article-item">
+          <img src="images/mypoem.PNG" alt="">
+          <div class="desc">
+            <a href="http://aribpoems.dx.am/" target="_blank">
+              <h2 class="heading-text">Simple Poetry Blog for Poets</h2>
+            </a>
+            <p>The RESTful app is handy for poets that doesn't kill for a too complex app. Just to add poem, edit, delete and allow viewers to comment on a poem and add a like.</p>
+          </div>
+        </div> -->
+        <div class="col-3 article-item">
+          <img src="images/easybank.png" alt="">
+          <div class="desc">
+            <a href="https://easybank-landing-page.herokuapp.com/" target="_blank">
+              <h2 class="heading-text">EasyBank Landing Page</h2>
+            </a>
+            <p>EasyBank Landing Page is the design of a professional landing page of responsive website for a banking industry.</p>
+          </div>
+        </div>
+        <div class="col-3 article-item">
+          <img src="images/social-dark.PNG" alt="">
+          <div class="desc">
+            <a href="https://social-dashboard-phi.now.sh/" target="_blank">
+              <h2 class="heading-text">Social Media Dashboard Interface</h2>
+            </a>
+            <p>The responsive Social Media Dashboard interface allows user to switch between two modes -- light mode and dark mode.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>  
+
+
+
+  <div class="row why-row"  id="contact">
+    <div class="why-container">
+      <div class=" center">
+        <h1 class="heading-text response">Leave a Message for Me.</h1>
+        <p class="response">I respond as soon as possible!</p>
+      </div>
+
+      <div class="flex message-container">
+        <div class="form ">
+          <form action="/messages" method="post" class="message-form">
+
+            <div class="input">
+              <label for="name">Your Name</label>
+              <input type="text" name="name" id="name" class="sender" >
+            </div>
+            <div class="input">
+              <label for="email">Your Email Address</label>
+              <input type="email" name="email" id="email">
+            </div>
+            <div class="input">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="input">
+              <input type="submit" value="Send">
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+<div class="row article" id="blog">
+    <div class="why-container">
+      <div class="col-12">
+        <h1 class="heading-text">Latest Write-ups</h1>
+      </div>
+
+      <div class="col-12 flex">
+        <div class="article-child article-item ">
+          <img src="images/javascript.jpg" alt="">
+          <div class="desc">
+            <p class="author">By Abdulrasheed Ibraheem</p>
+            <a target="_blank" href="https://medium.com/@arib1052001/5-steps-that-made-my-first-major-javascript-project-successful-271c861172ef">
+              <h2 class="heading-text">5 Steps That Made My First JavaScript Project Successful</h2>
+            </a>
+            <p>Recently, I made a web app that solves problems on six operations on different order of matrices. Making mathematicians relieved has been a goal of mine...</p>
+          </div>
+        </div>
+        <div class="col-3 article-item article-child">
+          <img src="images/tired-coder.jpg" alt="">
+          <div class="desc">
+            <p class="author">By Abdulrasheed Ibraheem</p>
+            <a href="https://medium.com/@arib1052001/what-you-really-need-to-become-a-web-developer-f418cde07511"  target="_blank">
+                <h2 class="heading-text">What You Really Need to Become a Web Developer</h2>
+            </a>
+            <p>people have misconceptions when it comes to becoming a web or software developer. many think they need a computer science degree or must attend a technical school…</p>
+  
+          </div>
+        </div>
+        <div class="col-3 article-item article-child">
+          <img src="images/mobile-phone.jpg" alt="">
+          <div class="desc">
+            <p class="author">By Abdulrasheed Ibraheem</p>
+            <a href="https://medium.com/@arib1052001/why-you-cant-code-with-phone-99c347d14700"  target="_blank">
+              <h2 class="heading-text">Why You Can't Code with Phone</h2>
+            </a>
+            <p>I've come across a lot of newbies asking the question: "Can I code with phone?" The Question, infact, is one of the most asked question from people who wants to start coding…</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>  
+
+
+  <%- include("footer") %>
